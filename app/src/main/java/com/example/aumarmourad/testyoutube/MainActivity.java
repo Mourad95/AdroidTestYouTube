@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
 
     }
-
+    //pour l'ecouteur
     @Override
     protected void onStop() {
         super.onStop();
@@ -43,8 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     protected void onRestart() {
         super.onRestart();
 
-         registerReceiver(myEarPlugReceiver,intentFilter); 
-
+         registerReceiver(myEarPlugReceiver,intentFilter);
 
 
     }
@@ -52,9 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     @Override
     public boolean onTouch(View v, MotionEvent event) {
 
-       // Intent zoroIntent = new Intent(MainActivity.this, ZoroView.class);
-        //startActivity(zoroIntent);
-       // finish();
+       Intent zoroIntent = new Intent(MainActivity.this, ZoroView.class);
+        startActivity(zoroIntent);
 
         return false;
     }

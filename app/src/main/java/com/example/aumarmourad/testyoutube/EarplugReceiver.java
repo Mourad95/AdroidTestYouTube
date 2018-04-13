@@ -16,12 +16,14 @@ class EarplugReceiver extends BroadcastReceiver{
         if (intent.getIntExtra("state",-1) ==1) {
 
             Log.d("ecouteur", "je suis dans broadcast receiver");
-            Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage("com.google.android.youtube");
+            /*Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage("com.google.android.youtube");
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
             if (launchIntent != null) {
-                context.startActivity(launchIntent);//null pointer check in case package name was not found
-            }
+                context.startActivity(launchIntent);
+            }*/
+
+
         }
     }
 }
